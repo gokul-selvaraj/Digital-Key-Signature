@@ -11,7 +11,7 @@ parser = argparse.ArgumentParser(
 
 parser.add_argument("--hash",
                     help="Hash Algorithm to use. ie md5, sha1, sha256",
-                    choices=['md5', 'sha1', 'sha256'],
+                    choices=['md5', 'sha1', 'sha256', 'sha512'],
                     default="sha256"
 )
 
