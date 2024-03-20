@@ -25,5 +25,8 @@ args = parser.parse_args()
 
 msg = "Hello World!"
 msg = hashlib.md5().hexdigest()
+msg2 = "Hellow World!"
+msg2 = hashlib.sha1().hexdigest()
 print(msg)
+print(msg2)
 
