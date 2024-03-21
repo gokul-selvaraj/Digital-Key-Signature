@@ -23,4 +23,17 @@ elif "win" in sys.platform:
 else:
     print("[-] Unsupported platform {} detected. Cannot interpret ".format(sys.platform))
 
-print(stat_info.st_size / 1024)
+print("File Size: ",stat_info.st_size / 1024)
+print("Last Access Time", dt.fromtimestamp(stat_info.st_atime))
+print("Modification Time: ", dt.fromtimestamp(stat_info.st_mtime))
+print("Inode: ", stat_info.st_ino)
+print("Mode: ", stat_info.st_mode)
+print("User Id: ", stat_info.st_uid)
+print("Group Id: ", stat_info.st_gid)
+print("Device Id: ", stat_info.st_dev)
+
+major = os.major(stat_info.st_dev)
+minor = os.minor(stat_info.st_dev)
+
+print("Major: ", major)
+print("Minor: ", minor)
